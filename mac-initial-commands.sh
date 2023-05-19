@@ -2,17 +2,25 @@
 
 HOSTNAME=""
 USERNAME=""
-ADMIN_USER=""
-ADMIN_PASS=""
-USER_PASS=""
 
+# Run without user
 sudo scutil --set HostName $HOSTNAME
 sudo scutil --set LocalHostName $HOSTNAME
 sudo scutil --set ComputerName $HOSTNAME
 dscacheutil -flushcache
 sudo /System/Library/CoreServices/ManagedClient.app/Contents/Resources/createmobileaccount -D -n $USERNAME
-sudo sysadminctl -adminUser ADMIN -adminPassword $BSTU_PASS -secureTokenOn $USERNAME -password $USER_PASS
+
+## Manual commands
+## Before user interaction, create the user & bstu password variable in the terminal and then clear screen
+# BSTU_PASS='thepassword'
+# USERNAME='theuser'
+# clear
+# sudo sysadminctl -adminUser bstu -adminPassword $BSTU_PASS -secureTokenOn $USERNAME -password 
 
 # (logout/login with user as an admin)
-# sudo sysadminctl -adminUser ncambanis -adminPassword *** -secureTokenOff bstu -password ***
+# Before user interaction, create the bstu password variable in the terminal and then clear screen
+# BSTU_PASS='thepassword'
+# USERNAME='theuser'
+# clear
+# sudo sysadminctl -adminUser $USERNAME -adminPassword *** -secureTokenOff bstu -password $BSTU_PASS
 # sudo diskutil apfs updatePreboot 
