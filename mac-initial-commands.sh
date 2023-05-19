@@ -22,5 +22,5 @@ sudo /System/Library/CoreServices/ManagedClient.app/Contents/Resources/createmob
 # BSTU_PASS='thepassword'
 # USERNAME='theuser'
 # clear
-# sudo sysadminctl -adminUser $USERNAME -adminPassword *** -secureTokenOff bstu -password $BSTU_PASS
+# sudo sysadminctl -adminUser $USERNAME -adminPassword *** -secureTokenOff bstu -password $BSTU_PASS  <--- prepei na ftiaxoume to "***"
 # sudo diskutil apfs updatePreboot 
